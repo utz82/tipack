@@ -1,0 +1,35 @@
+tipack
+------
+
+ This is a simple little program to generate TI data files.  To
+ generate an 83+ program (for instance), run
+
+   tipack myprog.bin -o myprog.8xp
+
+ By default the name is MYPROG (i.e., the name of the output file,
+ minus the suffix, converted to uppercase.)  If you want to use a
+ different name, add -n <name>:
+
+   tipack myprog.bin -o myprog.8xp -n COOLPRGM
+
+ If you want the program to be protected, add -p:
+
+   tipack asmprog.bin -o asmprog.8xp -p
+
+ Other options:
+
+  -t: specify the file type
+
+  -c: specify the file comment
+
+  -C: create complex number/list/matrix variables
+
+  -a: set the file to be archived
+
+  -r: don't add length bytes (only applies to types that normally have
+      length bytes, such as programs and appvars)
+
+  -v: be verbose
+
+ This is free software.  You are free to redistribute and/or modify it
+ under the terms of the GNU GPL.
