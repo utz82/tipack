@@ -6,7 +6,7 @@ CC = gcc
 CFLAGS = -g -O -W -Wall
 
 cflag = $(DEFS) $(CFLAGS) $(CPPFLAGS) `pkg-config --cflags tifiles2 ticonv glib-2.0`
-libs = $(LDFLAGS) $(LIBS) `pkg-config --libs tifiles2 ticonv`
+libs = $(LDFLAGS) $(LIBS) `pkg-config --libs glib-2.0 tifiles2 ticonv`
 
 tipack: tipack.c
 	$(CC) $(cflag) tipack.c $(libs) -o tipack

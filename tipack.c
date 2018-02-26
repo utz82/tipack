@@ -112,7 +112,7 @@ static int complexify_type(int model, int typeid)
 {
   if (tifiles_calc_is_ti9x(model))
     return ((typeid == TI89_LIST || typeid == TI89_MAT)
-	    ? typeid + 1 
+	    ? typeid + 1
 	    : typeid);
 
   if (model == CALC_TI85 || model == CALC_TI86)
@@ -150,7 +150,7 @@ int main(int argc, char** argv)
   VarEntry* ve;
   char* data = 0;
   unsigned long dsize, dalloc;
-  
+
   int i, j;
   char* p;
   const char* cp;
@@ -294,7 +294,7 @@ int main(int argc, char** argv)
     if (p)
       *p = 0;
     if (type_name_is_tokenized(model, typeid)) {
-      varname = ticonv_varname_tokenize(model, outfilename);
+      varname = ticonv_varname_tokenize(model, outfilename, typeid);
     }
     else {
       varname = malloc(strlen(outfilename) + 1);
